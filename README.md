@@ -1,16 +1,89 @@
-# React + Vite
+# EA Review MAF – React UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project contains the **React.js frontend** for the EA Review MAF platform.  
+The UI is responsible for rendering architecture review results, live review status, similarity scores, and agent-driven insights exposed by the backend FastAPI service.
 
-Currently, two official plugins are available:
+The application is designed for local development with a clean, modular React setup.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Tech Stack
+- **React.js (18+)**
+- **JavaScript** (based on project setup)
+- **Node.js (18 LTS recommended)**
+- **npm** or **yarn**
+- **Material UI (MUI)** (if applicable)
+- **Axios / Fetch** for API communication
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Prerequisites
+Ensure the following are installed on your local machine:
+- Node.js 18.x or later
+- npm (bundled with Node.js) or yarn
+- Git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Verify installation:
+```bash
+node -v
+npm -v
+```
+
+---
+
+## Steps to Run Locally
+
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd ea-review-maf-ui
+```
+
+### 2. Install Dependencies
+Using **npm**:
+```bash
+npm install
+```
+
+Or using **yarn**:
+```bash
+yarn install
+```
+
+---
+
+### 3. Configure Environment Variables (If Applicable)
+Create a `.env` file in the root directory and configure backend API details:
+```env
+REACT_APP_API_BASE_URL=http://127.0.0.1:8000
+```
+
+> Restart the server after updating environment variables.
+
+
+### 4. Start the Development Server
+Using **npm**:
+```bash
+npm run dev
+```
+
+The application will start on:
+```
+http://localhost:5173
+```
+
+## Project Structure (High-Level)
+```
+ea-review-maf-ui/
+│── src/
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # Page-level components
+│   ├── services/         # API service calls
+│   ├── hooks/            # Custom React hooks
+│   ├── styles/           # Global and component styles
+│   └── App.jsx           # Application entry
+│── public/
+│── package.json
+│── README.md
+```
